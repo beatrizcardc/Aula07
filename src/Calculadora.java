@@ -1,7 +1,22 @@
 import java.util.Scanner;
 
-public class Calculadora {
-
+	public class Calculadora {
+	public static double resultado;//variável global criada dentro da classe que poderá ser acessada por todas as funções, inclusive a main.
+	public static void exibirMenu() { //função exibirMenu, criada fora da main
+		System.out.println("PROGRAMA CALCULADORA");
+		System.out.println("Escolha sua opção!");
+		System.out.println("1 - Digitar valores");
+		System.out.println("2 - Realizar soma");
+		System.out.println("3 - Realizar subtração");
+		System.out.println("4 - Realizar divisão");
+		System.out.println("5 - Realizar multiplicação");
+		System.out.println("6 - Sair");
+	}
+	
+	public static void exibirResultado() {
+		System.out.println("O resultado foi " + resultado + "!");
+	}
+	
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		double valor1 = 0, valor2=0;
@@ -9,14 +24,7 @@ public class Calculadora {
 		int opcao = 0;
 		
 		while (opcao!=6) {
-			System.out.println("PROGRAMA CALCULADORA");
-			System.out.println("Escolha sua opção!");
-			System.out.println("1 - Digitar valores");
-			System.out.println("2 - Realizar soma");
-			System.out.println("3 - Realizar subtração");
-			System.out.println("4 - Realizar divisão");
-			System.out.println("5 - Realizar multiplicação");
-			System.out.println("6 - Sair");
+			exibirMenu();
 			opcao = leitor.nextInt();
 			
 			switch(opcao) {
