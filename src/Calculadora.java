@@ -39,24 +39,24 @@ import java.util.Scanner;
 				break;
 			case 2:
 				System.out.println("\n\nRealizando a soma entre " + valor1 + " e " + valor2);
-				soma = valor1 + valor2;
-				System.out.println("O resultado foi " + soma + "!\n\n");
+				resultado = valor1 + valor2;
+				exibirResultado();
 				
 				break;
 			case 3:
 				System.out.println("\n\nRealizando a subtração entre " + valor1 + " e " + valor2);
-				subtracao = valor1 - valor2;
-				System.out.println("O resultado foi " + subtracao + "!\n\n");
+				resultado = valor1 - valor2;
+				exibirResultado();;
 				break;
 			case 4:
 				System.out.println("\n\nRealizando a divisão entre " + valor1 + " e " + valor2);
-				divisao = valor1 / valor2;
-				System.out.println("O resultado foi " + divisao + "!\n\n");
+				resultado = valor1 / valor2;
+				exibirResultado();
 				break;
 			case 5:
 				System.out.println("\n\nRealizando a multiplicação entre " + valor1 + " e " + valor2);
-				multiplicacao = valor1 * valor2;
-				System.out.println("O resultado foi " + multiplicacao + "!\n\n");
+				resultado = valor1 * valor2;
+				exibirResultado();
 				break;
 			case 6:
 				System.out.println("Saindo do sistema");
