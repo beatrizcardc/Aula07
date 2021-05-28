@@ -13,14 +13,15 @@ import java.util.Scanner;
 		System.out.println("6 - Sair");
 	}
 	
-	public static void exibirResultado() {
+	public static void exibirResultado(double resultado) {
 		System.out.println("O resultado foi " + resultado + "!");
 	}
 	
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		double valor1 = 0, valor2=0;
-		double soma, subtracao, divisao, multiplicacao;
+		double soma=0, subtracao=0, divisao=0, multiplicacao=0;
+		
 		int opcao = 0;
 		
 		while (opcao!=6) {
@@ -39,24 +40,24 @@ import java.util.Scanner;
 				break;
 			case 2:
 				System.out.println("\n\nRealizando a soma entre " + valor1 + " e " + valor2);
-				resultado = valor1 + valor2;
-				exibirResultado();
+				soma = valor1 + valor2;
+				exibirResultado(soma);
 				
 				break;
 			case 3:
 				System.out.println("\n\nRealizando a subtração entre " + valor1 + " e " + valor2);
-				resultado = valor1 - valor2;
-				exibirResultado();;
+				subtracao = valor1 - valor2;
+				exibirResultado(subtracao);
 				break;
 			case 4:
 				System.out.println("\n\nRealizando a divisão entre " + valor1 + " e " + valor2);
-				resultado = valor1 / valor2;
-				exibirResultado();
+				divisao = valor1 / valor2;
+				exibirResultado(divisao);
 				break;
 			case 5:
 				System.out.println("\n\nRealizando a multiplicação entre " + valor1 + " e " + valor2);
-				resultado = valor1 * valor2;
-				exibirResultado();
+				multiplicacao = valor1 * valor2;
+				exibirResultado(multiplicacao);
 				break;
 			case 6:
 				System.out.println("Saindo do sistema");
