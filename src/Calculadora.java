@@ -16,12 +16,33 @@ import java.util.Scanner;
 	public static void exibirResultado(double resultado) {
 		System.out.println("O resultado foi " + resultado + "!");
 	}
-	
+	//função somar, subtrair, multiplicar, dividir com seus argumentos
 	public static void somar(double primeiroValor, double segundoValor) {
 		double soma;
 		System.out.println("\n\nRealizando a soma entre " + primeiroValor + " e " + segundoValor);
 		soma = primeiroValor + segundoValor;
 		exibirResultado(soma);
+	}
+	
+	public static void subtrair(double primeiroValor, double segundoValor) {
+		double subtracao;
+		System.out.println("\n\nRealizando a subtração entre " + primeiroValor + " e " + segundoValor);
+		subtracao = primeiroValor - segundoValor;
+		exibirResultado(subtracao);
+	}
+	
+	public static void dividir(double primeiroValor, double segundoValor) {
+		double divisao;
+		System.out.println("\n\nRealizando a divisão entre " + primeiroValor + " e " + segundoValor);
+		divisao = primeiroValor / segundoValor;
+		exibirResultado(divisao);
+	}
+	
+	public static void multiplicar(double primeiroValor, double segundoValor) {
+		double multiplicacao;
+		System.out.println("\n\nRealizando a multiplicação entre " + primeiroValor + " e " + segundoValor);
+		multiplicacao = primeiroValor * segundoValor;
+		exibirResultado(multiplicacao);
 	}
 	
 	public static void main(String[] args) {
@@ -43,27 +64,23 @@ import java.util.Scanner;
 				valor2 = leitor.nextDouble();
 				
 				System.out.println("Os valores " + valor1 + " e " + valor2 + " foram armazenados\n\n");
-				
 				break;
+				
 			case 2:
 				somar(valor1, valor2);
 				break;
 				
 			case 3:
-				System.out.println("\n\nRealizando a subtração entre " + valor1 + " e " + valor2);
-				subtracao = valor1 - valor2;
-				exibirResultado(subtracao);
+				subtrair(valor1,valor2);
 				break;
+				
 			case 4:
-				System.out.println("\n\nRealizando a divisão entre " + valor1 + " e " + valor2);
-				divisao = valor1 / valor2;
-				exibirResultado(divisao);
+				dividir(valor1, valor2);
 				break;
 			case 5:
-				System.out.println("\n\nRealizando a multiplicação entre " + valor1 + " e " + valor2);
-				multiplicacao = valor1 * valor2;
-				exibirResultado(multiplicacao);
+				multiplicar(valor1, valor2);
 				break;
+				
 			case 6:
 				System.out.println("Saindo do sistema");
 				break;
