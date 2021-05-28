@@ -17,6 +17,13 @@ import java.util.Scanner;
 		System.out.println("O resultado foi " + resultado + "!");
 	}
 	
+	public static void somar(double primeiroValor, double segundoValor) {
+		double soma;
+		System.out.println("\n\nRealizando a soma entre " + primeiroValor + " e " + segundoValor);
+		soma = primeiroValor + segundoValor;
+		exibirResultado(soma);
+	}
+	
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
 		double valor1 = 0, valor2=0;
@@ -39,11 +46,9 @@ import java.util.Scanner;
 				
 				break;
 			case 2:
-				System.out.println("\n\nRealizando a soma entre " + valor1 + " e " + valor2);
-				soma = valor1 + valor2;
-				exibirResultado(soma);
-				
+				somar(valor1, valor2);
 				break;
+				
 			case 3:
 				System.out.println("\n\nRealizando a subtração entre " + valor1 + " e " + valor2);
 				subtracao = valor1 - valor2;
